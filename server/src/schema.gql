@@ -1,0 +1,20 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Word {
+  text: String!
+  value: Float!
+}
+
+type GetWordCloudPayload {
+  data: [Word!]!
+}
+
+type Query {
+  getCloud(params: GetCloudInput = {limit: 100}): GetWordCloudPayload!
+}
+
+input GetCloudInput {
+  limit: Float = 100
+}
